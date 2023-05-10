@@ -1,0 +1,21 @@
+h1{
+text-align: center;
+padding-top: 50px;
+}
+
+#task{
+    text-align: center;
+}
+button{
+    padding-left: 90%;
+}
+#id{
+    width: 20000rem;
+}
+.card{
+    background-color: rgb(243, 142, 142);
+
+}
+body{
+    background-color: bisque;
+}
