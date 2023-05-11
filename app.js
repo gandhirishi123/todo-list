@@ -1,4 +1,4 @@
-document.getElementById('sb').addEventListener('click',fun1)
+document.getElementById('sb').addEventListener('click',addData)
 
 var Todos = [ 
     {title:'Todo 1', date:'Jan23'}
@@ -13,13 +13,12 @@ function addData(){
     }
 
     Todos.unshift(datatoadd)
-    fun1()
+    printdata()
 }
 
-function fun1(){
-   
-    for(let i =0;i<Todos.length;i++){
+function printdata(){
     document.getElementById('card').innerHTML = ``
+    for(let i =0;i<Todos.length;i++){
     document.getElementById('card').innerHTML += `
         <div class="col">
             <div class="card">
@@ -33,12 +32,13 @@ function fun1(){
     
 }
 }
+printdata()
 
 function deletecard(index){
     console.log(`e`)
     if(confirm('Are you sure')){
         Todos.splice(index, 1)
-        fun1()
+        printdata()
     }
 }
 
