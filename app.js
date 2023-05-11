@@ -1,7 +1,7 @@
 document.getElementById('sb').addEventListener('click',addData)
 
 var Todos = [ 
-    {title:'Todo 1', date:'Jan23'}
+    {title:'TODO 1', date:'Jan23'}
 ]
 function addData(){
     let msg = document.getElementById('task').value
@@ -11,13 +11,18 @@ function addData(){
         title:msg,
         date:currentdate
     }
-
-    Todos.unshift(datatoadd)
-    printdata()
+    if(msg.length>0){
+        Todos.unshift(datatoadd)
+        printdata()
+        
+    }else{
+        alert('Please Enter Your TODO!')
+    }
+    
 }
 
 function printdata(){
-    document.getElementById('card').innerHTML = ``
+    document.getElementById('card').innerHTML = ` `
     for(let i =0;i<Todos.length;i++){
     document.getElementById('card').innerHTML += `
         <div class="col">
